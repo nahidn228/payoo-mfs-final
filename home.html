@@ -20,10 +20,10 @@
       <div class="mockup-phone border-primary">
         <div class="camera"></div>
         <div class="display">
-          <div class="artboard artboard-demo phone-3 p-2 overflow-scroll pt-52">
+          <div class="artboard bg-slate-200 phone-3 p-2 overflow-scroll pt-10">
             <!-- hero section -->
 
-            <div class="flex items-center gap-6">
+            <div class="flex items-center justify-between">
               <div class="stats shadow">
                 <div class="stat flex justify-center items-center">
                   <!-- Logo -->
@@ -31,7 +31,9 @@
                     <i class="fa-solid fa-money-check-dollar"></i>
                   </h1>
                   <div>
-                    <div class="font-bold text-2xl">89,400</div>
+                    <div id="main-balance" class="font-bold text-2xl">
+                      89400
+                    </div>
                     <div class="stat-desc">Available Balance</div>
                   </div>
                 </div>
@@ -39,6 +41,7 @@
 
               <div class="">
                 <button
+                  id="btn-logOut"
                   class="font-bold text-blue-600 text-xl flex justify-center items-center gap-1"
                 >
                   <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
@@ -49,8 +52,8 @@
 
             <!-- Welcome to Payooo! -->
             <div class="text-center w-3/4 mx-auto">
-              <h2 class="text-xl font-bold">🔥 Welcome to Payooo!</h2>
-              <p class="text-xs text-gray-500">
+              <h2 class="text-2xl font-bold">🔥 Welcome to Payooo!</h2>
+              <p class="text-sm text-gray-500">
                 Enjoy easy and convenient financial services with us. Cashout
                 charge is low and
               </p>
@@ -86,7 +89,10 @@
                 <i class="fa-solid fa-money-bills text-xl text-gray-800"></i>
                 <span>Pay Bill</span>
               </button>
-              <button id="show-transactions" class="btn btn-outline btn-primary">
+              <button
+                id="show-transactions"
+                class="btn btn-outline btn-primary"
+              >
                 <i
                   class="fa-solid fa-magnifying-glass-dollar text-gray-800"
                 ></i>
@@ -94,11 +100,12 @@
               </button>
             </section>
             <div class="divider"></div>
+
             <!-- Add Money form Start -->
 
             <div
               id="add-money"
-              class="card bg-base-100 w-full max-w-sm max-h-xs shrink-0 shadow-2xl"
+              class="hidden card bg-base-100 w-full max-w-sm max-h-xs shrink-0 shadow-2xl"
             >
               <form class="card-body">
                 <div class="card-title font-extrabold">
@@ -110,11 +117,11 @@
                   </label>
                   <select class="select select-bordered">
                     <option disabled selected>Select Bank</option>
-                    <option>Star Wars</option>
-                    <option>Harry Potter</option>
-                    <option>Lord of the Rings</option>
-                    <option>Planet of the Apes</option>
-                    <option>Star Trek</option>
+                    <option>Agrani Bank</option>
+                    <option>Janata Bank</option>
+                    <option>City Bank</option>
+                    <option>UCBL</option>
+                    <option>DBBL</option>
                   </select>
                 </div>
                 <div class="form-control">
@@ -124,7 +131,8 @@
                     >
                   </label>
                   <input
-                    type="email"
+                    id="input-ac-number"
+                    type="text"
                     placeholder="Enter 11 digit account number"
                     class="input input-bordered"
                     required
@@ -135,7 +143,8 @@
                     <span class="label-text font-semibold">Amount to Add</span>
                   </label>
                   <input
-                    type="email"
+                    id="input-add-money"
+                    type="text"
                     placeholder="Amount to Add"
                     class="input input-bordered"
                     required
@@ -146,6 +155,7 @@
                     <span class="label-text font-semibold">Pin Number</span>
                   </label>
                   <input
+                    id="input-pin-number"
                     type="password"
                     placeholder="Enter 4 digit pin number"
                     class="input input-bordered"
@@ -153,7 +163,10 @@
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button class="btn btn-primary font-semibold">
+                  <button
+                    id="btn-add-money"
+                    class="btn btn-primary font-semibold"
+                  >
                     Add Money
                   </button>
                 </div>
@@ -177,7 +190,8 @@
                     <span class="label-text font-semibold">Agent Number</span>
                   </label>
                   <input
-                    type="email"
+                    id="agent-number"
+                    type="text"
                     placeholder="Enter 11 digit number"
                     class="input input-bordered"
                     required
@@ -188,7 +202,8 @@
                     <span class="label-text font-semibold">Amount</span>
                   </label>
                   <input
-                    type="email"
+                    id="cashOut-amount"
+                    type="text"
                     placeholder="Enter amount to withdraw"
                     class="input input-bordered"
                     required
@@ -199,6 +214,7 @@
                     <span class="label-text font-semibold">Pin Number</span>
                   </label>
                   <input
+                    id="cashOut-pin"
                     type="password"
                     placeholder="Enter 4 digit pin number"
                     class="input input-bordered"
@@ -206,7 +222,10 @@
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button class="btn btn-primary font-semibold">
+                  <button
+                    id="btn-cashOut"
+                    class="btn btn-primary font-semibold"
+                  >
                     Withdraw Money
                   </button>
                 </div>
@@ -231,7 +250,8 @@
                     >
                   </label>
                   <input
-                    type="email"
+                    id="input-transfer-ac"
+                    type="text"
                     placeholder="Enter 11 digit number"
                     class="input input-bordered"
                     required
@@ -242,7 +262,8 @@
                     <span class="label-text font-semibold">Amount</span>
                   </label>
                   <input
-                    type="email"
+                    id="input-transferAmount"
+                    type="text"
                     placeholder="Enter amount to transfer"
                     class="input input-bordered"
                     required
@@ -253,6 +274,7 @@
                     <span class="label-text font-semibold">Pin Number</span>
                   </label>
                   <input
+                    id="input-transfer-pin"
                     type="password"
                     placeholder="Enter 4 digit pin number"
                     class="input input-bordered"
@@ -260,7 +282,10 @@
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button class="btn btn-primary font-semibold">
+                  <button
+                    id="btn-send-now"
+                    class="btn btn-primary font-semibold"
+                  >
                     Send Now
                   </button>
                 </div>
@@ -286,6 +311,7 @@
                     >
                   </label>
                   <input
+                    id="get-coupon"
                     type="text"
                     placeholder="Enter your coupon"
                     class="input input-bordered"
@@ -294,7 +320,10 @@
                 </div>
 
                 <div class="form-control mt-6">
-                  <button class="btn btn-primary font-semibold">
+                  <button
+                    id="btn-get-bonus"
+                    class="btn btn-primary font-semibold"
+                  >
                     Get Bonus
                   </button>
                 </div>
@@ -317,12 +346,12 @@
                     <span class="label-text font-semibold">Select To Pay</span>
                   </label>
                   <select class="select select-bordered">
-                    <option disabled selected>Select Bank</option>
-                    <option>Star Wars</option>
-                    <option>Harry Potter</option>
-                    <option>Lord of the Rings</option>
-                    <option>Planet of the Apes</option>
-                    <option>Star Trek</option>
+                    <option disabled selected>Select To Pay</option>
+                    <option>House Rent</option>
+                    <option>Car Rent</option>
+                    <option>Electricity Bill</option>
+                    <option>EMI</option>
+                    <option>Credit Card</option>
                   </select>
                 </div>
                 <div class="form-control">
@@ -332,7 +361,8 @@
                     >
                   </label>
                   <input
-                    type="email"
+                    id="input-payBill-ac"
+                    type="text"
                     placeholder="Enter account number"
                     class="input input-bordered"
                     required
@@ -343,6 +373,7 @@
                     <span class="label-text font-semibold">Amount to Pay</span>
                   </label>
                   <input
+                    id="payBill-amount"
                     type="text"
                     placeholder="Amount to Pay"
                     class="input input-bordered"
@@ -354,6 +385,7 @@
                     <span class="label-text font-semibold">Pin Number</span>
                   </label>
                   <input
+                    id="payBill-amount-pin"
                     type="password"
                     placeholder="Enter 4 digit pin number"
                     class="input input-bordered"
@@ -361,7 +393,12 @@
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button class="btn btn-primary font-semibold">Pay Now</button>
+                  <button
+                    id="btn-pay-now"
+                    class="btn btn-primary font-semibold"
+                  >
+                    Pay Now
+                  </button>
                 </div>
               </form>
             </div>
@@ -376,8 +413,14 @@
         </div>
       </div>
     </main>
-    <script src="./js/home.js"></script>
+
+    <script src="./js/logout.js"></script>
     <script src="./js/features.js"></script>
     <script src="./js/utilities.js"></script>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/cashOut.js"></script>
+    <script src="./js/transfer.js"></script>
+    <script src="./js/coupon.js"></script>
+    <script src="./js/payBill.js"></script>
   </body>
 </html>

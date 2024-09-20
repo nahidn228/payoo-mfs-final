@@ -10,8 +10,18 @@ function makeVisibleById(id) {
   document.getElementById(id).classList.remove("hidden");
 }
 
+//get input field Value
 function inputValueById(id) {
   const inputValue = document.getElementById(id).value;
   const inputValueNumber = parseFloat(inputValue);
   return inputValueNumber;
 }
+
+//get innerText Value
+function innerTextValueById(id) {
+  const innerTextValue = document.getElementById(id).innerText;
+  const innerTextValueNumber = parseFloat(innerTextValue);
+  return innerTextValueNumber;
+}
+
+

@@ -9,3 +9,4 @@ document
       window.location.href = "../home.html";
     } else alert("Wrong Mobile Number Or Pin Number !!!");
   });
+
