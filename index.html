@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAYOO MFS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/18c0a8d05d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone border-primary">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <!-- hero section -->
+
+            <div class="hero bg-base-200 min-h-screen">
+              <div class="hero-content flex-col">
+                <div class="text-center">
+                  <!-- Logo -->
+                  <h1 class="text-8xl font-bold text-blue-800">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                  </h1>
+                  <h2 class="text-xl font-bold">
+                    Welcome to <span class="text-blue-800">Payooo</span> !
+                  </h2>
+                </div>
+                <div
+                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+                >
+                  <form class="card-body">
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-bold">Mobile Number</span>
+                      </label>
+                      <input
+                        id="mobile-number"
+                        type="text"
+                        placeholder="Enter your number"
+                        class="input input-bordered"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text font-bold">4 Digit Pin</span>
+                      </label>
+                      <input
+                        id="pin-number"
+                        type="password"
+                        placeholder="Enter 4 Digit Pin"
+                        class="input input-bordered"
+                        autocomplete="off"
+                        required
+                      />
+                      <label class="label">
+                        <a href="#" class="label-text-alt link link-hover"
+                          >Forgot password?</a
+                        >
+                      </label>
+                    </div>
+                    <div class="form-control mt-6">
+                      <button id="btn-login" class="btn btn-primary">
+                        Login
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/login.js"></script>
+    <script src="./js/utilities.js"></script>
+  </body>
+</html>

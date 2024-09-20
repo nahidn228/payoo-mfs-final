@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAYOO MFS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/18c0a8d05d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone border-primary">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3 p-2 overflow-scroll pt-52">
+            <!-- hero section -->
+
+            <div class="flex items-center gap-6">
+              <div class="stats shadow">
+                <div class="stat flex justify-center items-center">
+                  <!-- Logo -->
+                  <h1 class="text-2xl font-bold text-blue-600">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                  </h1>
+                  <div>
+                    <div class="font-bold text-2xl">89,400</div>
+                    <div class="stat-desc">Available Balance</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="">
+                <button
+                  class="font-bold text-blue-600 text-xl flex justify-center items-center gap-1"
+                >
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                </button>
+              </div>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Welcome to Payooo! -->
+            <div class="text-center w-3/4 mx-auto">
+              <h2 class="text-xl font-bold">🔥 Welcome to Payooo!</h2>
+              <p class="text-xs text-gray-500">
+                Enjoy easy and convenient financial services with us. Cashout
+                charge is low and
+              </p>
+            </div>
+            <!-- button card -->
+            <section class="grid grid-cols-3 gap-4 mt-6">
+              <button
+                id="show-addMoney"
+                class="btn btn-outline btn-primary p-1"
+              >
+                <i
+                  class="fa-solid fa-money-check-dollar text-xl text-gray-800"
+                ></i>
+                Add Money
+              </button>
+              <button id="show-cashOut" class="btn btn-outline btn-primary p-1">
+                <i
+                  class="fa-solid fa-hand-holding-dollar text-xl text-gray-800"
+                ></i>
+                <span>Cashout</span>
+              </button>
+              <button id="show-transfer" class="btn btn-outline btn-primary">
+                <i
+                  class="fa-solid fa-money-bill-transfer text-lg text-gray-800"
+                ></i>
+                <span>Transfer</span>
+              </button>
+              <button id="show-bonus" class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-sack-dollar text-xl text-gray-800"></i>
+                <span>Bonus</span>
+              </button>
+              <button id="show-payBill" class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-money-bills text-xl text-gray-800"></i>
+                <span>Pay Bill</span>
+              </button>
+              <button id="show-transactions" class="btn btn-outline btn-primary">
+                <i
+                  class="fa-solid fa-magnifying-glass-dollar text-gray-800"
+                ></i>
+                <span>Transactions</span>
+              </button>
+            </section>
+            <div class="divider"></div>
+            <!-- Add Money form Start -->
+
+            <div
+              id="add-money"
+              class="card bg-base-100 w-full max-w-sm max-h-xs shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="card-title font-extrabold">
+                  <span>Add Money</span>
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Select Bank</span>
+                  </label>
+                  <select class="select select-bordered">
+                    <option disabled selected>Select Bank</option>
+                    <option>Star Wars</option>
+                    <option>Harry Potter</option>
+                    <option>Lord of the Rings</option>
+                    <option>Planet of the Apes</option>
+                    <option>Star Trek</option>
+                  </select>
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold"
+                      >Bank Account Number</span
+                    >
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter 11 digit account number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Amount to Add</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Amount to Add"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Pin Number</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button class="btn btn-primary font-semibold">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Add Money form End -->
+            <!-- Cash Out form start -->
+
+            <div
+              id="cash-out"
+              class="hidden card bg-base-100 w-full max-w-sm max-h-xs shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="card-title font-extrabold">
+                  <span>Cash Out</span>
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Agent Number</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter 11 digit number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Amount</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter amount to withdraw"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Pin Number</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button class="btn btn-primary font-semibold">
+                    Withdraw Money
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Cash Out form End -->
+            <!-- Transfer Money form Start -->
+            <div
+              id="transfer-money"
+              class="hidden card bg-base-100 w-full max-w-sm max-h-xs shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="card-title font-extrabold">
+                  <span>Transfer Money</span>
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold"
+                      >User Account Number</span
+                    >
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter 11 digit number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Amount</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter amount to transfer"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Pin Number</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button class="btn btn-primary font-semibold">
+                    Send Now
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Transfer Money form End -->
+            <!-- Get Coupon form Start -->
+
+            <div
+              id="coupon"
+              class="hidden card bg-base-100 w-full max-w-sm max-h-xs shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="card-title font-extrabold">
+                  <span>Get Bonus</span>
+                </div>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold"
+                      >Enter Bonus Coupon</span
+                    >
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your coupon"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+
+                <div class="form-control mt-6">
+                  <button class="btn btn-primary font-semibold">
+                    Get Bonus
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Get Coupon form End -->
+            <!-- Pay Bill form Start -->
+
+            <div
+              id="pay-bill"
+              class="hidden card bg-base-100 w-full max-w-sm max-h-xs shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="card-title font-extrabold">
+                  <span>Pay Bill</span>
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Select To Pay</span>
+                  </label>
+                  <select class="select select-bordered">
+                    <option disabled selected>Select Bank</option>
+                    <option>Star Wars</option>
+                    <option>Harry Potter</option>
+                    <option>Lord of the Rings</option>
+                    <option>Planet of the Apes</option>
+                    <option>Star Trek</option>
+                  </select>
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold"
+                      >Biller Account Number</span
+                    >
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter account number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Amount to Pay</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Amount to Pay"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-semibold">Pin Number</span>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button class="btn btn-primary font-semibold">Pay Now</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Pay Bill form End -->
+            <!-- Transaction History form Start -->
+            <div id="transaction-history">
+              <h1 class="text-2xl font-bold">Transaction History</h1>
+            </div>
+            <!-- Transaction History form End -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/home.js"></script>
+    <script src="./js/features.js"></script>
+    <script src="./js/utilities.js"></script>
+  </body>
+</html>
