@@ -5,8 +5,7 @@ document
     const mobileNumber = inputValueById("mobile-number");
     const pinNumber = inputValueById("pin-number");
 
-    if (mobileNumber === 123456789 && pinNumber === 1234) {
+    if (mobileNumber === 1234 && pinNumber === 1234) {
       window.location.href = "../home.html";
     } else alert("Wrong Mobile Number Or Pin Number !!!");
   });
-
